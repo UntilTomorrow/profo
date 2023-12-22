@@ -10,7 +10,6 @@ class AdminComments extends Controller
 {
     public function index(){
         $pageTitle = 'Comments';
-        $emptyMessage = 'No data found';
         $data = DB::table('comments')->get();
         return view('admin.comments.list', compact('pageTitle','data')); 
     }
